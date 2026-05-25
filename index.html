@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Artemis II</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* subtelne gwiazdy */
+body::after {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.08;
+    animation: starsMove 120s linear infinite;
+    z-index: -1;
+}
+
+@keyframes starsMove {
+    from { transform: translate(0,0); }
+    to { transform: translate(-500px,-500px); }
+}
+
+/* przyciemnienie tła */
+.overlay {
+    background: rgba(0,0,0,0.6);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* tytuł */
+h1 {
+    font-size: 90px;
+    letter-spacing: 8px;
+    margin-top: 40px;
+    text-shadow: 0 0 25px #00ccff;
+}
+
+/* podtytuł */
+.subtitle {
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    opacity: 0.8;
+/*    text-align: left; */
+    margin: 40px;
+}
+
+/* kafelki */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+
+    /* animacja wejścia */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+/* opóźnienia animacji */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+.card:nth-child(10) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* glow efekt */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(0,204,255,0.25);
+    border-radius: 50%;
+    transition: 0.4s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ccff;
+}
+
+/* tekst */
+.card h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* stopka */
+.footer {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.7;
+    letter-spacing: 3px;
+}
+
+</style>
+<script type="text/javascript" nonce="21b3331b86fd47dd86d750b06cc" src="//local.adguard.org?ts=1779559907763&amp;type=content-script&amp;dmn=mail-attachment.googleusercontent.com&amp;url=https%3A%2F%2Fmail-attachment.googleusercontent.com%2Fattachment%2Fu%2F0%2F%3Fui%3D2%26ik%3Dad40ba5927%26attid%3D0.1%26permmsgid%3Dmsg-f%3A1866006174790563300%26th%3D19e562babd13b5e4%26view%3Datt%26disp%3Dsafe%26realattid%3Df_mpipaamo2%26zw%26saddbat%3DANGjdJ-G5NhJwCgUD2HEZC_E3PWQpqK6dkcjmgRmv4W8dmo_ZRMprAymSsCMj5tjOZFJMbgVjzIN9Ns7IEOO4yFAjxdynlSWFNXAelBqQe-ZnLmr_QMwV_kjaldOUqKif3aIlPJ1LvQN2FEQHC-qh4oxuWEhrAzlXJ7n3LfSus2pUejugy-SlEZP1fFarPZD7_Ag74iffeUhjBdeTMXX8x-3VXq3A_NWl4rYiGg8F-9jwRR3i0p7UTVoaxbcR4RySrsQ8eEVKqmPfswHuTxjMI6CPN3-Tsz08c-m6nAbon_JKgLEx0ihhDTntFPxHYQlEXfD08C17Yn6lREeno1st39hh-qtwCmBJDs2GC1wMpZnxKwA_6oNX9IZie84C1BHdfmIkQY-L0v8N2YIbc06u7Hluc3eAMN7XcVLDiGlpfoi5M8XF7oGT_NMthdIGRRm9gjdHmwU58jAeHk6WYS-0P2O-LltQ6BPy_Lzf4nsKndyzbKaACx6PeUWNl0j3Hip0hdAWgH0KsU6Xsew0hWMAzIZ6SANSU7k-XYpnEoCw8-KJHK7ls4P0WPRmXRKDpcAENe_Um9MgN1HLqpiY6c6Mg6f12sKIhBfIHc1H9LNE4YGdLSeg691LgPofg4N_bR1sHwtO-COsm3mi9eYu0cVELlxMuaT37le5UG-p8IrxPqZ0jmMNZXFBLtSsxPUyYd26_QJNJDxvIzkUzSX9ygriVFcMxdVpsfIrDGOZkD884xM86ML76YXRICjlMalwlyJHJ_zuXJFlrS16SWySypF6aci7quxjiryqAlPgL3pJ632MsmSynmDnAvMpIINIFh1b3NXr3X9E7tcaPybATOUJ3iwGhRFiNaMHmmmkIRt2BZsbjLslxHnIvvQIFmI3hSExGhXicFb-4Llq5ApHaKK7_qTkXj-p2MO16lFLW-Fb5hjvVZPw5PlYp7QwojIVMIIvInlRksPxutu_vYJFE4JhqQtj6mAylltlqtutF_FZLUJjdH0g90bpUzB3IMx0B0eHz_aDPSMfupRW67xGV9X8RidYyPzB4rq3toN-NGPWKs0Xu4rrg3xUEKKJaDLS4SYzwcjL8yPhrawAMP9pLCNj5altY3ZLJ8E4PxmFvmIwg&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="21b3331b86fd47dd86d750b06cc" src="//local.adguard.org?ts=1779559907763&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script></head>
+
+<body>
+
+<div class="overlay">
+
+<h1>ARTEMIS II</h1>
+<div class="subtitle"><h2>PROJEKT ZREALIZOWANY PRZEZ KLASĘ 7.</h2></div>
+
+<div class="grid">
+
+<a href="autorzy.html" class="card"><h2>O NAS</h2></a>
+<a href="historia.html" class="card"><h2>HISTORIA ARTEMIS</h2></a>
+<a href="apollo.html" class="card"><h2>WYPRAWA APOLLO</h2></a>
+<a href="orion.html" class="card"><h2>KAPSUŁA ORION</h2></a>
+<a href="DaneTechniczneA2.html" class="card"><h2>DANE TECHNICZNE</h2></a>
+<a href="zaloga.html" class="card"><h2>ZAŁOGA</h2></a>
+<a href="niebezpieczenstwo.html" class="card"><h2>START I POWRÓT</h2></a>
+<a href="jedzenie.html" class="card"><h2>KOSMICZNE JEDZENIE</h2></a>
+<a href="badania.html" class="card"><h2>BADANIA PO MISJI</h2></a>
+<a href="maskotka.html" class="card"><h2>MASKOTKA ARTEMIS II</h2></a>
+
+
+</div>
+
+<div class="footer">
+<h3>Niepubliczna Szkoła Podstawowa Moja Szkoła w Łomiankach • (2026)</h3>
+</div>
+
+</div>
+
+<script>
+console.log("Projekt Artemis II - autor: Ula");
+</script>
+
+</body>
+</html>

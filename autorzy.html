@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Autorzy</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url('tlo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* ruch gwiazd */
+body::after {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.08;
+    animation: starsMove 120s linear infinite;
+    z-index: -1;
+}
+
+@keyframes starsMove {
+    from { transform: translate(0,0); }
+    to { transform: translate(-500px,-500px); }
+}
+
+/* przyciemnienie */
+.overlay {
+    background: rgba(0,0,0,0.7);
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* tytuł */
+h1 {
+    font-size: 80px;
+    letter-spacing: 6px;
+    margin-top: 40px;
+    text-shadow: 0 0 20px #00ccff;
+}
+
+/* neonowa linia */
+.line {
+    width: 150px;
+    height: 2px;
+    background: #00ccff;
+    margin: 15px auto 40px;
+    box-shadow: 0 0 10px #00ccff;
+}
+
+/* siatka */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* kafelek */
+.card {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+
+    /* animacja wejścia */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+/* opóźnienia */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+.card:nth-child(10) { animation-delay: 1s; }
+.card:nth-child(11) { animation-delay: 1.1s; }
+
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* glow wewnątrz */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(0,204,255,0.25);
+    border-radius: 50%;
+    transition: 0.4s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card:hover::before {
+    width: 180px;
+    height: 180px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ccff;
+}
+
+/* tekst */
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.role {
+    font-size: 14px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 2;
+}
+
+</style>
+<script type="text/javascript" nonce="21b3331b86fd47dd86d750b06cc" src="//local.adguard.org?ts=1779559907763&amp;type=content-script&amp;dmn=mail-attachment.googleusercontent.com&amp;url=https%3A%2F%2Fmail-attachment.googleusercontent.com%2Fattachment%2Fu%2F0%2F%3Fui%3D2%26ik%3Dad40ba5927%26attid%3D0.2%26permmsgid%3Dmsg-f%3A1866006174790563300%26th%3D19e562babd13b5e4%26view%3Datt%26disp%3Dsafe%26realattid%3Df_mpipaaml1%26zw%26saddbat%3DANGjdJ9DBuCGHwoxXWgNj-Eam2x43VMVCubKz4UxsHT7Gz01Kw98rKuzvArRfvtqLhQGu-adLZqCUDFyoDvKd_Gqnq4HDtjSSXiP0LJN2bP0H_R1ggaKUG7x6lrGiNeDNlHp0YB9E9wWTARz7F7X4Ktia9eFvthLrYKLH3IbgY_GhxwaQS5Jx46RU3EhyjB2cyQEUsujRlv46NzjWSXn6ynbAsxNIVa9CjfXvngfcg6YzRS0TFkxtO9rXfV3BGRokLF58wDZtaZWOVzyfQ2oX6lKsVajF039iosOHGfW08qWl3fd3HR_Z7AmZjXcH2ZS_mhBnh4tVl6AJ5u_w__9oKYYTnLwzySfCp210HDqGWHXnSBG1TY7oIoDFtLNmpLOg0YxF3faeaHcNUfoaleuOTTHtPEuHW7QNJZiRQqaJhsmGyEWLtKGEWBcw7dt_HkP7w3vjS0-_ly5zr_Qzcw1EMpgZmq41haVhDYIBxa7NRjkBqWnWh5tLRVCQ7EBLJAv7DdoqNkP4U9HToMuGbQspzKLaPap7FhCGIfvktWxV97m7xNtTx7FyMhlEDASJ5x66Oxh6sJ0nPmJJzZIj1kMfQ0B5ImeO9sL12KwIQqPHVt77VAZV1VIJvEp3W7gVPiyavuE5JIqbumw2_8Wlt9YbiFOemPjAjx5UaHYCEatpMEx9UB4BThSHTvkbjdZQ7-ik9IGWv1Sf8ckfbQISzeCb1GigM8eDY4i8nw685bNZyx1cy2ggBUxRZTOY7p3F6Knzqziel1vMq7EoZ81BnlW6BkzE8DoPOY1UrnniGHsiVLhG7u0WbH25YxoZDNK4NtqXrXG8f62omALSP_x5Ir5rbaorbSvg8ncm_VzFV2tCD-1H9_Ka05-fAxDliMmVPgPhl7ieJR830Pj1DmvUtaACq6nM7cCnh1tqEGM7GYkQuESvY1xrmF3gKA03LH_4Z5fbHcvcrXmzmJ7wuXSbqW9E36a6e_ozfng3dX8IM_PYn6ec-jHj6UsYT_apIOR9r0Rj3MjAbZg0qIgN36JfubZAjrYXZe-16Z8XP1kSHd4rORD4dKptEsDsKXUPf2tg_xu3kVttqDL_XJHVUbBhZtCdjaTY-cqdPYNRJ6kZuhJjA&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="21b3331b86fd47dd86d750b06cc" src="//local.adguard.org?ts=1779559907763&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script></head>
+
+<body>
+
+<div class="overlay">
+
+<h1>ZAŁOGA PROJEKTU</h1>
+<div class="line"></div>
+
+<div class="grid">
+
+<div class="card"><div class="name">Ula Sukiennik</div><div class="role">Strona główna + autorzy</div></div>
+<div class="card"><div class="name">Cleo Rakowska</div><div class="role">Historia projektu Artemis</div></div>
+<div class="card"><div class="name">Zuzia Tuzimek</div><div class="role">Wyprawa Apollo na księżyc</div></div>
+<div class="card"><div class="name">Zuzia Mościbrodzka</div><div class="role">Badania lekarskie po powrocie z misji</div></div>
+<div class="card"><div class="name">Szymon Karłowicz</div><div class="role">Najważniejsze informacje techniczne dotyczące Misji Artemis II</div></div>
+<div class="card"><div class="name">Janek Dzierżanowski</div><div class="role">Załoga Artemis II</div></div>
+<div class="card"><div class="name">Stasiek Pluta</div><div class="role">Najważniejsze dane techniczne dotyczące Artemis II</div></div>
+<div class="card"><div class="name">Krystian Mizerka</div><div class="role">Kosmiczne jedzenie</div></div>
+<div class="card"><div class="name">Basia Cwetch</div><div class="role">Niebezpieczny start i powrót – dlaczego?</div></div>
+<div class="card"><div class="name">Iga Dominiak</div><div class="role">Maskotka Artemis II </div></div>
+<div class="card"><div class="name">Marcin Etienne</div><div class="role">Opiekun Projektu </div></div>
+
+
+</div>
+
+
+<div align="right" style="position: fixed; bottom: 20px; width: 100%;">
+	<a href="index.html">
+		<img src="przycisk.png" width="15%" high="15%" alt="opis zdjęcia" alt="przycisk">
+	</a>
+</div>
+
+
+</body>
+</html>
