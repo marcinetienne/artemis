@@ -52,6 +52,7 @@ img, video {
     border: 0;
 }
 
+/*
 .maskotka {
     width: 20%;
     min-width: 180px;
@@ -93,6 +94,7 @@ img, video {
 		padding: 10px;
     }
 }
+*/
 .ostrzezenie {
     color: #ff4d4d;
     background-color: rgba(0, 0, 0, 0.75);
