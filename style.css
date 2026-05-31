@@ -90,6 +90,7 @@ img, video {
     .jedzenie-zdjecie {
         width: 90%;
         min-width: 0;
+		padding: 10px;
     }
 }
 .ostrzezenie {
@@ -98,8 +99,9 @@ img, video {
     padding: 15px;
     border-left: 5px solid #ff0000;
     border-radius: 10px;
-    width: 80%;
+    width: 70%;
+	max-width: 900px;
     margin: 20px auto;
     line-height: 1.6;
-    text-align: left;
+    text-align: center;
 }
