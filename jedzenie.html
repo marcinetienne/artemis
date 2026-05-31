@@ -2,9 +2,60 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Misja Artemis</title>
 
 <style>
+
+<!-- Responsywność dla telefonu -->
+
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+body {
+    font-size: 16px; /* Podstawa dla czytelności */
+}
+
+button, a.button {
+    padding: 12px 20px; /* Większe obszary kliknięcia */
+    display: inline-block;
+}
+
+/* Styl dla komputerów i większych ekranów */
+.kontener {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styl dla telefonów (ekrany o szerokości do 768 pikseli) */
+@media (max-width: 768px) {
+    .kontener {
+        width: 100%; /* Rozciąga stronę na cały ekran telefonu */
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+	text-align: center;
+}
+
+<!-- Koniec responsywności dla telefonu -->
 
 body {
     margin: 0;
@@ -32,8 +83,9 @@ body {
 <a href="https://zdoswiadczenia.pl/zywienie-w-przestrzeni-kosmicznej-co-jedza-kosmonauci" style="color: #C0C0C0" target="_blank">Żywienie w przestrzeni kosmicznej – co jedzą kosmonauci?</a><br>
 <a href="https://www.radiowroclaw.pl/articles/view/151655/Co-jedza-astronauci-w-trakcie-misji-na-Miedzynarodowej-Stacji-Kosmicznej-Jak-przygotowac-kosmiczne-pierogi" style="color: #C0C0C0" target="_blank">Jak przygotować kosmiczne pierogi?</a>
 
-<br><br>
+<br><br><center>
 <img src="jedzenieartemis.jpg" width="20%" height="20%">
+<br>
 <img src="jedzonko.jpg" width="20%" height="20%">
 <br> <i>Źródło: spacenews.com, komputerswiat.pl</i></br>
     </div>
@@ -59,7 +111,7 @@ allowfullscreen>
 
 <div align="right" style="position: fixed; bottom: 20px; width: 100%;">
 	<a href="index.html">
-		<img src="przycisk.png" width="15%" high="15%">
+		<img src="przycisk.png" width="20%" high="20%">
 	</a>
 </div>
 </body>
