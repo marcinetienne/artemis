@@ -1,0 +1,41 @@
+.przycisk {
+    width: 15%;
+    min-width: 180px;
+    height: auto;
+}
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+body {
+    font-size: 16px; /* Podstawa dla czytelności */
+}
+
+button, a.button {
+    padding: 12px 20px; /* Większe obszary kliknięcia */
+    display: inline-block;
+}
+
+/* Styl dla komputerów i większych ekranów */
+.kontener {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styl dla telefonów (ekrany o szerokości do 768 pikseli) */
+@media (max-width: 768px) {
+    .kontener {
+        width: 100%; /* Rozciąga stronę na cały ekran telefonu */
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
