@@ -77,3 +77,18 @@ img, video {
     display: block;
     margin: 20px auto;
 }
+.jedzenie-zdjecie {
+    width: 30%;
+    max-width: 350px;
+    min-width: 220px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .jedzenie-zdjecie {
+        width: 90%;
+        min-width: 0;
+    }
+}
