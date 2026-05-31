@@ -2,9 +2,38 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Artemis II</title>
 
 <style>
+
+body {
+    font-size: 16px; /* Podstawa dla czytelności */
+}
+
+button, a.button {
+    padding: 12px 20px; /* Większe obszary kliknięcia */
+    display: inline-block;
+}
+
+/* Styl dla komputerów i większych ekranów */
+.kontener {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styl dla telefonów (ekrany o szerokości do 768 pikseli) */
+@media (max-width: 768px) {
+    .kontener {
+        width: 100%; /* Rozciąga stronę na cały ekran telefonu */
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 body {
     margin: 0;
