@@ -2,9 +2,58 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Misja Artemis</title>
 <style>
+<!-- Responsywność dla telefonu -->
 
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+body {
+    font-size: 16px; /* Podstawa dla czytelności */
+}
+
+button, a.button {
+    padding: 12px 20px; /* Większe obszary kliknięcia */
+    display: inline-block;
+}
+
+/* Styl dla komputerów i większych ekranów */
+.kontener {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styl dla telefonów (ekrany o szerokości do 768 pikseli) */
+@media (max-width: 768px) {
+    .kontener {
+        width: 100%; /* Rozciąga stronę na cały ekran telefonu */
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+	text-align: center;
+}
+
+<!-- Koniec responsywności dla telefonu -->
 body {
     margin: 0;
     font-family: 'Arial';
@@ -38,11 +87,9 @@ odcina łączność z centrum kontroli lotów. Oznacza to, że jeśli pojawiłby
 Mimo tych zagrożeń NASA podkreśla, że misja została bardzo dokładnie przygotowana, a systemy bezpieczeństwa mają ograniczyć ryzyko do minimum.<br>
 Artemis II ma być kluczowym krokiem przed przyszłymi lądowaniami ludzi na Księżycu.<p>
 
-<img src="https://portaltechnologiczny.pl/wp-content/uploads/2026/04/artemis2start.png" alt="start.jpg" height="400">
-
-
-
-<img src="https://i.gremicdn.pl/image/free/1bf897ef8833d779f2d6bd508f33b5db/kapsula-z-czlonkami-misji-artemis-ii-po-wyladowaniu-w-wodach-oceanu-spokojnego?t=crop:3394:2105:nowe:223:0,resize:fill:2000:1250&ctx=preview" alt="start.jpg" height="400">
+<center><img src="artemis2start.png" alt="start.jpg" height="300">
+<br>
+<img src="artemis2powrot.jpg" alt="powrot.jpg" height="300">
 
 <br><i> Źródło: rp.pl / portaltechnologiczny.pl</i></div>
 
@@ -74,7 +121,7 @@ allowfullscreen>
 
 <div align="right" style="position: fixed; bottom: 20px; width: 100%;">
 	<a href="index.html">
-		<img src="przycisk.png" width="15%" high="15%">
+		<img src="przycisk.png" width="20%" high="20%">
 	</a>
 </div>
 </body>
