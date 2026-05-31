@@ -6,7 +6,55 @@
     <title>Badania lekarskie po powrocie z misji Artemis</title>
 
 <style>
+<!-- Responsywność dla telefonu -->
 
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: url(tlo.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+body {
+    font-size: 16px; /* Podstawa dla czytelności */
+}
+
+button, a.button {
+    padding: 12px 20px; /* Większe obszary kliknięcia */
+    display: inline-block;
+}
+
+/* Styl dla komputerów i większych ekranów */
+.kontener {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Styl dla telefonów (ekrany o szerokości do 768 pikseli) */
+@media (max-width: 768px) {
+    .kontener {
+        width: 100%; /* Rozciąga stronę na cały ekran telefonu */
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+	text-align: center;
+}
+
+<!-- Koniec responsywności dla telefonu -->
 body {
     margin: 0;
     font-family: 'Arial';
@@ -26,6 +74,7 @@ body {
 <!-- Główna treść -->
 <p>Po powrocie z misji programu Artemis, astronauci przechodzą natychmiastowe badania medyczne na pokładzie okrętu ratowniczego.<br> Następnie trafiają do Centrum Lotów Kosmicznych im. Johnsona w Houston, gdzie podlegają szczegółowej, wielotygodniowej obserwacji i fizjoterapii.</p>
 
+<center>
 <img src="https://images.euronews.com/articles/stories/09/71/74/28/1440x810_cmsv2_636d20d1-993d-568f-848b-9a97081e81fe-9717428.jpg" width="25%" height="25%">
 <br> <i>Źródło: euronews.com</i></br>
 
@@ -55,7 +104,7 @@ body {
 
 <div align="right" style="position: fixed; bottom: 20px; width: 100%;">
 	<a href="index.html">
-		<img src="przycisk.png" width="15%" high="15%">
+		<img src="przycisk.png" width="20%" high="20%">
 	</a>
 </div>
 
