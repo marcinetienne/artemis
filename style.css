@@ -39,3 +39,22 @@ img, video {
     height: auto;
     display: block;
 }
+.video-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+.maskotka {
+    width: 20%;
+    min-width: 180px;
+    max-width: 300px;
+    height: auto;
+}
