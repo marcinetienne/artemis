@@ -105,3 +105,18 @@ img, video {
     line-height: 1.6;
     text-align: center;
 }
+.galeria {
+    display: flex;
+    justify-content: center;
+	align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+	margin: 20px 0;
+}
+
+.galeria img {
+    width: 45%;
+    max-height: 500px;
+    width: auto;
+	border-radius: 10px;
+}
