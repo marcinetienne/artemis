@@ -60,11 +60,11 @@ button, a.button {
 @media (max-width: 768px) {
 
     body {
-        line-height: 1.5;
+        line-height: 1.2;
     }
 
     p {
-        line-height: 1.5;
+        line-height: 1.2;
         margin: 20px 15px;
     }
 
@@ -79,12 +79,7 @@ button, a.button {
 
     h2 {
         font-size: 20px;
-        line-height: 1.8;
-    }
-
-    p {
-        line-height: 1.5;
-        margin: 20px 15px;
+        line-height: 1.2;
     }
 
 }
