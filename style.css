@@ -25,20 +25,18 @@ p {
     font-size: 18px;
     text-align: center;
     margin: 15px 40px;
-    line-height: 0.7;
+    line-height: 1.8;
 }
 
 body {
     margin: 0;
-    font-family: 'Arial';
+    font-family: Arial, sans-serif;
     background: url(tlo.png) no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
-}
-
-body {
-    font-size: 18px; /* Podstawa dla czytelności */
+	font-size: 18px; /* Podstawa dla czytelności */
+	line-height: 1.8;
 }
 
 button, a.button {
