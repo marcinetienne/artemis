@@ -25,7 +25,7 @@ p {
     font-size: 18px;
     text-align: center;
     margin: 15px 40px;
-    line-height: 1.8;
+    line-height: 0.8;
 }
 
 body {
@@ -55,6 +55,38 @@ button, a.button {
     .kontener {
         width: 100%; /* Rozciąga stronę na cały ekran telefonu */
     }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        line-height: 2;
+    }
+
+    p {
+        line-height: 2;
+        margin: 20px 15px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    p {
+        line-height: 2;
+        margin: 20px 15px;
+    }
+
 }
 
 img, video {
