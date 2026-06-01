@@ -172,3 +172,8 @@ img, video {
     width: auto;
 	border-radius: 10px;
 }
+.opiekun-zdjecie {
+    width: 350px;
+    max-width: 90%;
+    height: auto;
+}
