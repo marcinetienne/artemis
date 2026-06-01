@@ -60,11 +60,11 @@ button, a.button {
 @media (max-width: 768px) {
 
     body {
-        line-height: 2;
+        line-height: 1.5;
     }
 
     p {
-        line-height: 2;
+        line-height: 1.5;
         margin: 20px 15px;
     }
 
@@ -83,7 +83,7 @@ button, a.button {
     }
 
     p {
-        line-height: 2;
+        line-height: 1.5;
         margin: 20px 15px;
     }
 
